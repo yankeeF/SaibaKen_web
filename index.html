@@ -14,11 +14,16 @@
   <meta property="og:description" content="サクッと遊べて、楽しい。 Quick, satisfying mobile games from SaibaKen Studio.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://saibaken.pages.dev/">
+  <meta property="og:site_name" content="SaibaKen Studio">
   <meta property="og:image" content="https://saibaken.pages.dev/assets/social/og-default.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SaibaKen Studio game lineup">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SaibaKen Studio">
+  <meta name="twitter:description" content="Quick, satisfying games from SaibaKen Studio.">
   <meta name="twitter:image" content="https://saibaken.pages.dev/assets/social/og-default.jpg">
+  <meta name="twitter:image:alt" content="SaibaKen Studio game lineup">
 
   <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png">
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -27,8 +32,8 @@
   <!-- Keep this policy aligned with the Google AdSense allowlist above. -->
   <meta http-equiv="Content-Security-Policy"
         content="default-src 'self';
-                 script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.google.com https://*.googleadservices.com https://*.doubleclick.net;
-                 script-src-elem 'self' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.google.com https://*.googleadservices.com https://*.doubleclick.net;
+                 script-src 'self' 'unsafe-inline' 'sha256-b5NetMPw9XCcCwIoI8et2QoSQhijxEo27Mx7AylQPiM=' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.google.com https://*.googleadservices.com https://*.doubleclick.net;
+                 script-src-elem 'self' 'sha256-b5NetMPw9XCcCwIoI8et2QoSQhijxEo27Mx7AylQPiM=' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.google.com https://*.googleadservices.com https://*.doubleclick.net;
                  img-src 'self' data: https:;
                  style-src 'self' 'unsafe-inline';
                  connect-src 'self' https:;
@@ -37,6 +42,8 @@
                  base-uri 'none';
                  form-action 'none';
                  frame-ancestors 'none'">
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://saibaken.pages.dev/#organization","name":"SaibaKen Studio","alternateName":"サイバーケン · スタジオ","url":"https://saibaken.pages.dev/","description":"SaibaKen Studio creates quick, satisfying casual games for mobile players."},{"@type":"WebSite","@id":"https://saibaken.pages.dev/#website","url":"https://saibaken.pages.dev/","name":"SaibaKen Studio","publisher":{"@id":"https://saibaken.pages.dev/#organization"},"inLanguage":"en"}]}</script>
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9259452753673673"
@@ -119,6 +126,7 @@
         <p class="hero-copy" data-i18n="hero.copy">Small games, sharp ideas, and satisfying play you can enjoy anytime.</p>
       </div>
 
+      <h2 class="sr-only">Games</h2>
       <div class="game-tabs" id="games" aria-label="Game collection">
         <a class="game-tab tab-dodon reveal" href="#dodon-ninja" data-scroll-target="dodon-ninja">
           <img src="/assets/games/dodon-ninja/icon-256.webp" width="256" height="256" alt="" decoding="async">

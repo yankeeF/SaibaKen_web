@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saibaken.pages.dev/sitemap.xml
