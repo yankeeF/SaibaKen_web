@@ -1,27 +1,30 @@
-<!-- index.html -->
 <!doctype html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="color-scheme" content="dark light" />
-  <meta name="theme-color" content="#000000" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#000000">
 
-  <title>SaibaKen Studio | サクッと遊べて、楽しい。</title>
-  <meta name="description" content="SaibaKen Studio. サクッと遊べて、楽しい。Simple fun, instantly." />
+  <title>SaibaKen Studio | Quick, satisfying games</title>
+  <meta name="description" content="SaibaKen Studio creates quick, satisfying mobile games including Dodon Ninja, Candy Beads, Neji Hacker, and Sengoku Puzzle.">
+  <link rel="canonical" href="https://saibaken.pages.dev/">
 
-  <!-- 预加载主图（同目录 main.jpg） -->
-  <link rel="preload" as="image" href="main.jpg" />
+  <meta property="og:title" content="SaibaKen Studio">
+  <meta property="og:description" content="サクッと遊べて、楽しい。 Quick, satisfying mobile games from SaibaKen Studio.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saibaken.pages.dev/">
+  <meta property="og:image" content="https://saibaken.pages.dev/assets/social/og-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://saibaken.pages.dev/assets/social/og-default.jpg">
 
-  <!-- Open Graph / Twitter（相对路径可用；想更稳可改成绝对 URL） -->
-  <meta property="og:title" content="SaibaKen Studio" />
-  <meta property="og:description" content="サクッと遊べて、楽しい。Simple fun, instantly." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="main.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="main.jpg" />
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
 
-  <!-- 安全策略：允许本站资源与 Google AdSense 广告脚本 -->
+  <!-- Keep this policy aligned with the Google AdSense allowlist above. -->
   <meta http-equiv="Content-Security-Policy"
         content="default-src 'self';
                  script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://*.google.com https://*.googleadservices.com https://*.doubleclick.net;
@@ -39,137 +42,263 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9259452753673673"
      crossorigin="anonymous"></script>
 
-  <style>
-    :root {
-      --bg: #000;
-      --fg: rgba(255,255,255,0.88);
-      --fg-dim: rgba(255,255,255,0.68);
-      --line: rgba(255,255,255,0.14);
-      --footer-h: 56px;
-    }
-
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-      overflow: hidden; /* 保证无滚动条 */
-    }
-
-    .stage {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-    }
-
-    /* 主图：等比缩放，尽量完整显示 */
-    .hero {
-      display: block;
-      max-width: 100vw;
-      max-height: 100vh;
-      width: auto;
-      height: auto;
-      user-select: none;
-      -webkit-user-drag: none;
-    }
-
-    /* 图片加载失败提示 */
-    .fallback {
-      position: absolute;
-      inset: 0;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      text-align: center;
-      color: var(--fg-dim);
-      letter-spacing: 0.02em;
-    }
-
-    /* 底部固定栏：尽量不打扰画面 */
-    footer {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: var(--footer-h);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      padding: 10px 14px;
-      border-top: 1px solid var(--line);
-      background: rgba(0,0,0,0.55);
-      backdrop-filter: blur(8px);
-    }
-
-    footer a {
-      color: var(--fg);
-      text-decoration: none;
-      font-size: 12px;
-      line-height: 1;
-      opacity: 0.92;
-    }
-    footer a:hover { text-decoration: underline; opacity: 1; }
-    footer .sep {
-      width: 1px;
-      height: 14px;
-      background: var(--line);
-    }
-    footer .note {
-      color: var(--fg-dim);
-      font-size: 12px;
-      line-height: 1;
-      white-space: nowrap;
-      opacity: 0.9;
-    }
-
-    /* 小屏时允许换行 */
-    @media (max-width: 520px) {
-      footer {
-        height: auto;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px 12px;
-      }
-      footer .note { white-space: normal; text-align: center; }
-    }
-  </style>
+  <script src="/main.js" defer></script>
 </head>
-
 <body>
-  <main class="stage" aria-label="SaibaKen Studio">
-    <img
-      class="hero"
-      src="main.jpg"
-      width="1920"
-      height="1080"
-      alt="SaibaKen Studio - サクッと遊べて、楽しい。"
-      onerror="document.getElementById('fallback').style.display='flex'; this.style.display='none';"
-    />
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <div id="fallback" class="fallback" role="alert" aria-live="polite">
-      main.jpg の読み込みに失敗しました。<br/>
-      Please make sure <b>main.jpg</b> is in the same folder as <b>index.html</b>.
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" data-scroll-target="home" aria-label="SaibaKen Studio home">
+        <span>SaibaKen Studio</span>
+        <small>サイバーケン · スタジオ</small>
+      </a>
+
+      <div class="mobile-header-actions">
+        <div class="menu-group mobile-language-group">
+          <button class="menu-button language-button" type="button" aria-expanded="false" aria-controls="mobile-language-menu">
+            <span data-current-language>English</span>
+            <span class="chevron" aria-hidden="true"></span>
+          </button>
+          <div class="dropdown language-menu" id="mobile-language-menu" aria-label="Language">
+            <button type="button" data-language="ja">日本語</button>
+            <button type="button" data-language="en" aria-current="true">English</button>
+            <button type="button" data-language="zh-Hant">繁體中文</button>
+            <button type="button" data-language="zh-Hans">简体中文</button>
+          </div>
+        </div>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+          <span class="sr-only" data-i18n="nav.menu">Open menu</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+        <a href="#home" data-scroll-target="home" data-i18n="nav.home">Home</a>
+
+        <div class="menu-group">
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="games-menu">
+            <span data-i18n="nav.games">Games</span>
+            <span class="chevron" aria-hidden="true"></span>
+          </button>
+          <div class="dropdown game-menu" id="games-menu">
+            <a href="#dodon-ninja" data-scroll-target="dodon-ninja" data-i18n="games.dodon.name">Thunder Ninja: Dragon Shooter</a>
+            <a href="#candy-beads" data-scroll-target="candy-beads" data-i18n="games.candy.name">Candy Beads: Color Puzzle</a>
+            <a href="#neji-hacker" data-scroll-target="neji-hacker" data-i18n="games.neji.name">Neji Hacker: Screw Puzzle</a>
+            <a href="#sengoku-puzzle" data-scroll-target="sengoku-puzzle" data-i18n="games.sengoku.name">SengokuPazuru: Puzzle Battle</a>
+          </div>
+        </div>
+
+        <div class="menu-group language-group desktop-language-group">
+          <button class="menu-button language-button" type="button" aria-expanded="false" aria-controls="language-menu">
+            <span data-current-language>English</span>
+            <span class="chevron" aria-hidden="true"></span>
+          </button>
+          <div class="dropdown language-menu" id="language-menu" aria-label="Language">
+            <button type="button" data-language="ja">日本語</button>
+            <button type="button" data-language="en" aria-current="true">English</button>
+            <button type="button" data-language="zh-Hant">繁體中文</button>
+            <button type="button" data-language="zh-Hans">简体中文</button>
+          </div>
+        </div>
+      </nav>
     </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <h1>
+          <span>SaibaKen Studio</span>
+          <small>サイバーケン · スタジオ</small>
+        </h1>
+        <p class="tagline">サクッと遊べて、楽しい。</p>
+        <p class="hero-copy" data-i18n="hero.copy">Small games, sharp ideas, and satisfying play you can enjoy anytime.</p>
+      </div>
+
+      <div class="game-tabs" id="games" aria-label="Game collection">
+        <a class="game-tab tab-dodon reveal" href="#dodon-ninja" data-scroll-target="dodon-ninja">
+          <img src="/assets/games/dodon-ninja/icon-256.webp" width="256" height="256" alt="" decoding="async">
+          <span class="tab-index">01</span>
+          <div>
+            <p class="tab-japanese">ドドン忍者</p>
+            <h3 data-i18n="games.dodon.name">Thunder Ninja: Dragon Shooter</h3>
+            <p data-i18n="games.dodon.short">Fast ninja shooting action with weapons, upgrades, and dragon battles!</p>
+          </div>
+          <span class="tab-arrow" aria-hidden="true">↘</span>
+        </a>
+
+        <a class="game-tab tab-candy reveal" href="#candy-beads" data-scroll-target="candy-beads">
+          <img src="/assets/games/candy-beads/icon-256.webp" width="256" height="256" alt="" decoding="async">
+          <span class="tab-index">02</span>
+          <div>
+            <p class="tab-japanese">キャンディビーズ</p>
+            <h3 data-i18n="games.candy.name">Candy Beads: Color Puzzle</h3>
+            <p data-i18n="games.candy.short">Move colorful beads, match colors, and enjoy a cute casual puzzle!</p>
+          </div>
+          <span class="tab-arrow" aria-hidden="true">↘</span>
+        </a>
+
+        <a class="game-tab tab-neji reveal" href="#neji-hacker" data-scroll-target="neji-hacker">
+          <img src="/assets/games/neji-hacker/icon-256.webp" width="256" height="256" alt="" decoding="async">
+          <span class="tab-index">03</span>
+          <div>
+            <p class="tab-japanese">ねじねじハッカー</p>
+            <h3 data-i18n="games.neji.name">Neji Hacker: Screw Puzzle</h3>
+            <p data-i18n="games.neji.short">Unscrew bolts, unlock mechanisms, and clear cyberpunk puzzle stages!</p>
+          </div>
+          <span class="tab-arrow" aria-hidden="true">↘</span>
+        </a>
+
+        <a class="game-tab tab-sengoku reveal" href="#sengoku-puzzle" data-scroll-target="sengoku-puzzle">
+          <img src="/assets/games/sengoku-puzzle/icon-256.webp" width="256" height="256" alt="" decoding="async">
+          <span class="tab-index">04</span>
+          <div>
+            <p class="tab-japanese">戦国パズル</p>
+            <h3 data-i18n="games.sengoku.name">SengokuPazuru: Puzzle Battle</h3>
+            <p data-i18n="games.sengoku.short">Connect warlord pieces, trigger combos, and win Sengoku puzzle battles!</p>
+          </div>
+          <span class="tab-arrow" aria-hidden="true">↘</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="game-section game-dodon" id="dodon-ninja">
+      <div class="game-section-inner section-shell">
+        <div class="game-copy reveal">
+          <a class="game-icon-link" href="https://play.google.com/store/apps/details?id=com.dodonnin.saku"
+             target="_blank" rel="noopener noreferrer" aria-label="Download Thunder Ninja on Google Play"
+             data-aria-i18n="games.dodon.downloadLabel">
+            <img src="/assets/games/dodon-ninja/icon-256.webp" width="256" height="256"
+                 alt="Thunder Ninja app icon" data-alt-i18n="games.dodon.iconAlt" decoding="async">
+          </a>
+          <p class="game-number">Game 01 · ドドン忍者</p>
+          <h2 data-i18n="games.dodon.name">Thunder Ninja: Dragon Shooter</h2>
+          <p class="game-lead" data-i18n="games.dodon.short">Fast ninja shooting action with weapons, upgrades, and dragon battles!</p>
+          <p data-i18n="games.dodon.description">Jump into quick arcade battles, collect equipment, and shape your style with 12 weapons, 30 upgrades, and 360 combinations.</p>
+          <a class="download-button" href="https://play.google.com/store/apps/details?id=com.dodonnin.saku"
+             target="_blank" rel="noopener noreferrer" aria-label="Download Thunder Ninja on Google Play"
+             data-aria-i18n="games.dodon.downloadLabel">
+            <span data-i18n="actions.googlePlay">Get it on Google Play</span><span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="game-visual reveal">
+          <img class="character" src="/assets/games/dodon-ninja/character-main-720.webp" width="720" height="1080"
+               alt="Thunder Ninja character" data-alt-i18n="games.dodon.characterAlt" loading="lazy" decoding="async">
+          <div class="screenshots">
+            <img src="/assets/games/dodon-ninja/screenshot-01-720.webp" width="720" height="1600"
+                 alt="Thunder Ninja shooting battle" data-alt-i18n="games.dodon.screenAlt1" loading="lazy" decoding="async">
+            <img src="/assets/games/dodon-ninja/screenshot-02-720.webp" width="720" height="1600"
+                 alt="Thunder Ninja weapon upgrades" data-alt-i18n="games.dodon.screenAlt2" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-section game-candy" id="candy-beads">
+      <div class="game-section-inner section-shell">
+        <div class="game-copy reveal">
+          <div class="game-icon-static">
+            <img src="/assets/games/candy-beads/icon-256.webp" width="256" height="256"
+                 alt="Candy Beads app icon" data-alt-i18n="games.candy.iconAlt" decoding="async">
+          </div>
+          <p class="game-number">Game 02 · キャンディビーズ</p>
+          <h2 data-i18n="games.candy.name">Candy Beads: Color Puzzle</h2>
+          <p class="game-lead" data-i18n="games.candy.short">Move colorful beads, match colors, and enjoy a cute casual puzzle!</p>
+          <p data-i18n="games.candy.description">Plan each move, bring matching colors together, and enjoy a bright puzzle that balances relaxation with a little strategy.</p>
+          <button class="download-button coming-soon" type="button" disabled>
+            <span data-i18n="actions.comingSoon">Coming Soon</span>
+          </button>
+        </div>
+        <div class="game-visual reveal">
+          <img class="character" src="/assets/games/candy-beads/character-main-720.webp" width="720" height="960"
+               alt="Candy Beads character" data-alt-i18n="games.candy.characterAlt" loading="lazy" decoding="async">
+          <div class="screenshots">
+            <img src="/assets/games/candy-beads/screenshot-01-720.webp" width="720" height="1600"
+                 alt="Candy Beads color puzzle" data-alt-i18n="games.candy.screenAlt1" loading="lazy" decoding="async">
+            <img src="/assets/games/candy-beads/screenshot-02-720.webp" width="720" height="1600"
+                 alt="Candy Beads puzzle stage" data-alt-i18n="games.candy.screenAlt2" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-section game-neji" id="neji-hacker">
+      <div class="game-section-inner section-shell">
+        <div class="game-copy reveal">
+          <a class="game-icon-link" href="https://play.google.com/store/apps/details?id=com.nejihacker.com"
+             target="_blank" rel="noopener noreferrer" aria-label="Download Neji Hacker on Google Play"
+             data-aria-i18n="games.neji.downloadLabel">
+            <img src="/assets/games/neji-hacker/icon-256.webp" width="256" height="256"
+                 alt="Neji Hacker app icon" data-alt-i18n="games.neji.iconAlt" decoding="async">
+          </a>
+          <p class="game-number">Game 03 · ねじねじハッカー</p>
+          <h2 data-i18n="games.neji.name">Neji Hacker: Screw Puzzle</h2>
+          <p class="game-lead" data-i18n="games.neji.short">Unscrew bolts, unlock mechanisms, and clear cyberpunk puzzle stages!</p>
+          <p data-i18n="games.neji.description">Remove screws in the right order, move parts, and unlock clever mechanisms in quick cyberpunk puzzle stages.</p>
+          <a class="download-button" href="https://play.google.com/store/apps/details?id=com.nejihacker.com"
+             target="_blank" rel="noopener noreferrer" aria-label="Download Neji Hacker on Google Play"
+             data-aria-i18n="games.neji.downloadLabel">
+            <span data-i18n="actions.googlePlay">Get it on Google Play</span><span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="game-visual reveal">
+          <img class="character" src="/assets/games/neji-hacker/character-main-720.webp" width="720" height="1151"
+               alt="Neji Hacker character" data-alt-i18n="games.neji.characterAlt" loading="lazy" decoding="async">
+          <div class="screenshots">
+            <img src="/assets/games/neji-hacker/screenshot-01-720.webp" width="720" height="1600"
+                 alt="Neji Hacker screw puzzle" data-alt-i18n="games.neji.screenAlt1" loading="lazy" decoding="async">
+            <img src="/assets/games/neji-hacker/screenshot-02-720.webp" width="720" height="1600"
+                 alt="Neji Hacker cleared stage" data-alt-i18n="games.neji.screenAlt2" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-section game-sengoku" id="sengoku-puzzle">
+      <div class="game-section-inner section-shell">
+        <div class="game-copy reveal">
+          <a class="game-icon-link" href="https://play.google.com/store/apps/details?id=com.Sengoku.Pazuru"
+             target="_blank" rel="noopener noreferrer" aria-label="Download Sengoku Puzzle on Google Play"
+             data-aria-i18n="games.sengoku.downloadLabel">
+            <img src="/assets/games/sengoku-puzzle/icon-256.webp" width="256" height="256"
+                 alt="Sengoku Puzzle app icon" data-alt-i18n="games.sengoku.iconAlt" decoding="async">
+          </a>
+          <p class="game-number">Game 04 · 戦国パズル</p>
+          <h2 data-i18n="games.sengoku.name">SengokuPazuru: Puzzle Battle</h2>
+          <p class="game-lead" data-i18n="games.sengoku.short">Connect warlord pieces, trigger combos, and win Sengoku puzzle battles!</p>
+          <p data-i18n="games.sengoku.description">Trace a route through warlord pieces, build chain combos, and use skills at the right moment to turn the battle around.</p>
+          <a class="download-button" href="https://play.google.com/store/apps/details?id=com.Sengoku.Pazuru"
+             target="_blank" rel="noopener noreferrer" aria-label="Download Sengoku Puzzle on Google Play"
+             data-aria-i18n="games.sengoku.downloadLabel">
+            <span data-i18n="actions.googlePlay">Get it on Google Play</span><span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="game-visual reveal">
+          <img class="character character-small" src="/assets/games/sengoku-puzzle/character-main-354.webp" width="354" height="526"
+               alt="Sengoku Puzzle warrior" data-alt-i18n="games.sengoku.characterAlt" loading="lazy" decoding="async">
+          <div class="screenshots">
+            <img src="/assets/games/sengoku-puzzle/screenshot-01-720.webp" width="720" height="1600"
+                 alt="Sengoku Puzzle battle board" data-alt-i18n="games.sengoku.screenAlt1" loading="lazy" decoding="async">
+            <img src="/assets/games/sengoku-puzzle/screenshot-02-720.webp" width="720" height="1600"
+                 alt="Sengoku Puzzle stage map" data-alt-i18n="games.sengoku.screenAlt2" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <noscript>
-    <style>
-      body { overflow: auto; }
-      .fallback { display: flex; }
-      .hero { display: none; }
-    </style>
-    <div class="fallback" role="alert">
-      JavaScript が無効です。画像が表示されない場合は main.jpg の配置をご確認ください。<br/>
-      JavaScript is disabled. Please verify main.jpg is placed correctly.
+  <footer class="site-footer">
+    <div class="section-shell">
+      <div>
+        <strong>SaibaKen Studio</strong>
+        <span>サイバーケン · スタジオ</span>
+      </div>
+      <p>© 2025 SaibaKen Studio / サイバーケン · スタジオ</p>
     </div>
-  </noscript>
+  </footer>
 </body>
 </html>
