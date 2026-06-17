@@ -182,7 +182,7 @@ img {
 
 .dropdown {
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   right: 0;
   width: max-content;
   min-width: 220px;
@@ -472,6 +472,14 @@ img {
   gap: clamp(50px, 8vw, 130px);
 }
 
+@media (min-width: 1051px) {
+  .game-section-inner {
+    min-height: auto;
+    padding-top: clamp(64px, 6vw, 96px);
+    padding-bottom: clamp(64px, 6vw, 96px);
+  }
+}
+
 .game-section:nth-of-type(even) .game-copy {
   order: 2;
 }
@@ -756,6 +764,19 @@ img {
     border-radius: 0;
     background: transparent;
     box-shadow: none;
+  }
+
+  .mobile-language-group .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: max-content;
+    max-width: calc(100vw - (var(--page-gutter) * 2));
+    max-height: calc(100dvh - var(--header-height) - 12px);
+    overflow-y: auto;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.9);
   }
 
   .game-tab img {
