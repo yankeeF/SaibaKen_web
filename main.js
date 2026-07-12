@@ -54,7 +54,7 @@ document.documentElement.classList.add("js");
           screenAlt2: "Neji Hacker cleared stage",
         },
         sengoku: {
-          name: "SengokuPazuru: Puzzle Battle",
+          name: "SengokuPuzzle: Puzzle Battle",
           short: "Connect warlord pieces, trigger combos, and win Sengoku puzzle battles!",
           description: "Trace a route through warlord pieces, build chain combos, and use skills at the right moment to turn the battle around.",
           downloadLabel: "Download Sengoku Puzzle on Google Play",
