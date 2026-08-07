@@ -81,6 +81,18 @@
         <a href="#home" data-scroll-target="home" data-i18n="nav.home">Home</a>
 
         <div class="menu-group">
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="business-menu">
+            <span data-i18n="nav.business">Business</span>
+            <span class="chevron" aria-hidden="true"></span>
+          </button>
+          <div class="dropdown" id="business-menu">
+            <a href="#solutions" data-scroll-target="solutions" data-i18n="nav.solutions">Solutions</a>
+            <a href="#publishing" data-scroll-target="publishing" data-i18n="nav.publishing">Publishing</a>
+            <a href="#about" data-scroll-target="about" data-i18n="nav.about">About</a>
+          </div>
+        </div>
+
+        <div class="menu-group">
           <button class="menu-button" type="button" aria-expanded="false" aria-controls="games-menu">
             <span data-i18n="nav.games">Games</span>
             <span class="chevron" aria-hidden="true"></span>
@@ -105,6 +117,8 @@
             <button type="button" data-language="zh-Hans">简体中文</button>
           </div>
         </div>
+
+        <a href="mailto:business@saibaken.com" data-i18n="nav.contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -120,8 +134,10 @@
         <p class="tagline">サクッと遊べて、楽しい。</p>
         <p class="hero-copy" data-i18n="hero.copy">Small games, sharp ideas, and satisfying play you can enjoy anytime.</p>
       </div>
+    </section>
 
-      <h2 class="sr-only">Games</h2>
+    <section class="games-section">
+      <h2 class="sr-only" data-i18n="nav.games">Games</h2>
       <div class="game-tabs" id="games" aria-label="Game collection">
         <a class="game-tab tab-dodon reveal" href="#dodon-ninja" data-scroll-target="dodon-ninja">
           <img src="/assets/games/dodon-ninja/icon-256.webp" width="256" height="256" alt="" decoding="async">
@@ -166,6 +182,61 @@
           </div>
           <span class="tab-arrow" aria-hidden="true">↘</span>
         </a>
+      </div>
+    </section>
+
+    <section class="business-section" id="solutions">
+      <div class="business-inner section-shell reveal">
+        <div class="business-copy">
+          <p class="business-kicker" data-i18n="solutions.kicker">Solutions</p>
+          <h2 class="business-title" data-i18n="solutions.title">AI Interactive Drama Solution</h2>
+          <p class="business-description" data-i18n="solutions.description">Transform original content into interactive products built for global audiences.</p>
+          <ol class="business-steps">
+            <li class="business-step"><span aria-hidden="true">01</span><span data-i18n="solutions.steps.ipStory">IP + Story Analysis</span></li>
+            <li class="business-step"><span aria-hidden="true">02</span><span data-i18n="solutions.steps.interactiveDesign">Interactive Design Alignment</span></li>
+            <li class="business-step"><span aria-hidden="true">03</span><span data-i18n="solutions.steps.developmentProduction">Game Development + Content Production</span></li>
+            <li class="business-step"><span aria-hidden="true">04</span><span data-i18n="solutions.steps.globalPublishing">Global Publishing</span></li>
+          </ol>
+        </div>
+        <figure class="business-character">
+          <img class="business-character-image" src="/assets/games/dodon-ninja/character-main-720.webp" width="720" height="1080" alt="Thunder Ninja character" data-alt-i18n="games.dodon.characterAlt" loading="lazy" decoding="async">
+          <figcaption class="business-character-label" data-i18n="business.characters.dodon">Dodon Ninja</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="business-section" id="publishing">
+      <div class="business-inner section-shell reveal">
+        <div class="business-copy">
+          <p class="business-kicker" data-i18n="publishing.kicker">Publishing</p>
+          <h2 class="business-title" data-i18n="publishing.title">Global Publishing Capability</h2>
+          <p class="business-description" data-i18n="publishing.description">A focused publishing path for products entering new markets.</p>
+          <ul class="business-features">
+            <li class="business-feature"><span aria-hidden="true"></span><span data-i18n="publishing.capabilities.localization">Localization</span></li>
+            <li class="business-feature"><span aria-hidden="true"></span><span data-i18n="publishing.capabilities.platformDistribution">Platform Distribution</span></li>
+            <li class="business-feature"><span aria-hidden="true"></span><span data-i18n="publishing.capabilities.operationOptimization">Operation Optimization</span></li>
+            <li class="business-feature"><span aria-hidden="true"></span><span data-i18n="publishing.capabilities.monetization">Monetization</span></li>
+          </ul>
+        </div>
+        <figure class="business-character">
+          <img class="business-character-image" src="/assets/games/candy-beads/character-main-720.webp" width="720" height="960" alt="Candy Beads character" data-alt-i18n="games.candy.characterAlt" loading="lazy" decoding="async">
+          <figcaption class="business-character-label" data-i18n="business.characters.candy">Candy Beads</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="business-section business-about" id="about">
+      <div class="business-inner section-shell reveal">
+        <div class="business-copy">
+          <p class="business-kicker" data-i18n="about.kicker">About</p>
+          <h2 class="business-title" data-i18n="about.title">SaibaKen Studio</h2>
+          <p class="business-description" data-i18n="about.description">Transforming original IP into interactive products and connecting them with global markets.</p>
+          <p class="business-positioning" data-i18n="about.positioning">IP Productization &amp; Global Publishing Platform</p>
+        </div>
+        <figure class="business-character">
+          <img class="business-character-image" src="/assets/games/neji-hacker/character-main-720.webp" width="720" height="1151" alt="Neji Hacker character" data-alt-i18n="games.neji.characterAlt" loading="lazy" decoding="async">
+          <figcaption class="business-character-label" data-i18n="business.characters.neji">Neji Hacker</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -302,7 +373,10 @@
         <strong>SaibaKen Studio</strong>
         <span>サイバーケン · スタジオ</span>
       </div>
-      <p>© 2025 SaibaKen Studio / サイバーケン · スタジオ</p>
+      <p>
+        <span>© 2025 SaibaKen Studio / サイバーケン · スタジオ</span>
+        <a class="footer-contact" href="mailto:business@saibaken.com">business@saibaken.com</a>
+      </p>
     </div>
   </footer>
 </body>

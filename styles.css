@@ -264,7 +264,9 @@ img {
 
 .hero,
 .game-tabs,
-.game-section {
+.game-section,
+.business-section,
+.games-section {
   scroll-margin-top: calc(var(--header-height) + 20px);
 }
 
@@ -430,6 +432,141 @@ img {
   bottom: 30px;
   color: var(--accent);
   font-size: 28px;
+}
+
+.business-section,
+.games-section {
+  border-top: 1px solid var(--line);
+  background: #020203;
+}
+
+.business-inner {
+  min-height: min(52vw, 680px);
+  padding-top: clamp(84px, 9vw, 132px);
+  padding-bottom: clamp(84px, 9vw, 132px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 72px);
+  text-align: left;
+}
+
+.business-copy {
+  min-width: 0;
+  margin-left: clamp(0px, 5vw, 96px);
+}
+
+.business-kicker {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.business-title {
+  max-width: 660px;
+  margin: 0;
+  font-size: clamp(38px, 4.2vw, 64px);
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+
+.business-description {
+  max-width: 590px;
+  margin: 22px 0 0;
+  color: #d7dbe3;
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.business-positioning {
+  max-width: 540px;
+  margin: 24px 0 0;
+  color: #fff;
+  font-size: clamp(17px, 1.7vw, 22px);
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.business-steps,
+.business-features {
+  max-width: 600px;
+  margin: 34px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  list-style: none;
+}
+
+.business-step,
+.business-feature {
+  min-width: 0;
+  padding: 11px 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid var(--line);
+  color: #e6e9ee;
+  font-size: clamp(15px, 1.35vw, 18px);
+  line-height: 1.35;
+}
+
+.business-step > span:first-child {
+  width: 28px;
+  flex: 0 0 28px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.business-feature > span:first-child {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+  border: 1px solid #aeb7c5;
+  border-radius: 50%;
+}
+
+.business-character {
+  width: min(100%, 360px);
+  min-height: 400px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: end;
+  justify-self: start;
+}
+
+.business-character-image {
+  width: 100%;
+  max-height: 470px;
+  align-self: center;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 22px 36px rgba(0, 0, 0, 0.4));
+}
+
+.business-character-label {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.games-section {
+  padding: clamp(28px, 3.4vw, 48px) var(--page-gutter) clamp(44px, 5vw, 72px);
+}
+
+.games-section .game-tabs {
+  margin: 0 auto;
 }
 
 .tab-dodon,
@@ -663,6 +800,18 @@ img {
   margin: 0;
 }
 
+.footer-contact {
+  margin-top: 6px;
+  display: block;
+  color: inherit;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.footer-contact:hover {
+  color: #fff;
+}
+
 .js .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -702,6 +851,20 @@ img {
   .game-visual {
     width: 100%;
     max-width: 820px;
+  }
+
+  .business-inner {
+    min-height: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.8fr);
+  }
+
+  .business-copy {
+    margin-left: clamp(0px, 3vw, 36px);
+  }
+
+  .business-character {
+    grid-column: 1 / -1;
+    min-height: 280px;
   }
 }
 
@@ -809,6 +972,26 @@ img {
     align-items: flex-start;
     flex-direction: column;
   }
+
+  .business-inner {
+    padding-top: 84px;
+    padding-bottom: 84px;
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .business-character {
+    justify-self: start;
+  }
+
+  .business-character {
+    width: min(100%, 300px);
+    min-height: 0;
+  }
+
+  .business-character-image {
+    max-height: 340px;
+  }
 }
 
 @media (max-width: 680px) {
@@ -824,6 +1007,15 @@ img {
 }
 
 @media (max-width: 520px) {
+  .header-inner {
+    gap: 12px;
+  }
+
+  .mobile-language-group .language-button {
+    max-width: 104px;
+    padding-inline: 10px;
+  }
+
   .game-section {
     --game-media-height: clamp(300px, 105vw, 420px);
   }
@@ -849,6 +1041,28 @@ img {
     padding-top: 94px;
     padding-bottom: 100px;
     gap: 54px;
+  }
+
+  .business-inner {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .business-copy {
+    margin-left: 0;
+  }
+
+  .business-title {
+    font-size: clamp(36px, 11vw, 50px);
+  }
+
+  .business-description {
+    font-size: clamp(22px, 7vw, 30px);
+  }
+
+  .business-steps,
+  .business-features {
+    margin-top: 36px;
   }
 
   .game-visual {

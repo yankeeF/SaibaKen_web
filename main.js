@@ -18,10 +18,41 @@ document.documentElement.classList.add("js");
         title: "SaibaKen Studio | Quick, satisfying games",
         description: "SaibaKen Studio creates quick, satisfying mobile games including Dodon Ninja, Candy Beads, Neji Hacker, and Sengoku Puzzle.",
       },
-      nav: { home: "Home", games: "Games", menu: "Open menu" },
+      nav: {
+        home: "Home", business: "Business", solutions: "Solutions", publishing: "Publishing", about: "About", games: "Games", contact: "Contact", menu: "Open menu",
+      },
       hero: {
         copy: "Small games, sharp ideas, and satisfying play you can enjoy anytime.",
       },
+      solutions: {
+        kicker: "Solutions",
+        title: "AI Interactive Drama Solution",
+        description: "Transform original content into interactive products built for global audiences.",
+        steps: {
+          ipStory: "IP + Story Analysis",
+          interactiveDesign: "Interactive Design Alignment",
+          developmentProduction: "Game Development + Content Production",
+          globalPublishing: "Global Publishing",
+        },
+      },
+      publishing: {
+        kicker: "Publishing",
+        title: "Global Publishing Capability",
+        description: "A focused publishing path for products entering new markets.",
+        capabilities: {
+          localization: "Localization",
+          platformDistribution: "Platform Distribution",
+          operationOptimization: "Operation Optimization",
+          monetization: "Monetization",
+        },
+      },
+      about: {
+        kicker: "About",
+        title: "SaibaKen Studio",
+        description: "Transforming original IP into interactive products and connecting them with global markets.",
+        positioning: "IP Productization & Global Publishing Platform",
+      },
+      business: { characters: { dodon: "Dodon Ninja", candy: "Candy Beads", neji: "Neji Hacker" } },
       actions: { googlePlay: "Get it on Google Play", comingSoon: "Coming Soon" },
       games: {
         dodon: {
@@ -70,10 +101,41 @@ document.documentElement.classList.add("js");
         title: "SaibaKen Studio | サクッと遊べて、楽しい。",
         description: "SaibaKen Studioは、短時間で気軽に楽しめるモバイルゲームを制作しています。",
       },
-      nav: { home: "ホーム", games: "ゲーム", menu: "メニューを開く" },
+      nav: {
+        home: "ホーム", business: "ビジネス", solutions: "ソリューション", publishing: "パブリッシング", about: "私たちについて", games: "ゲーム", contact: "お問い合わせ", menu: "メニューを開く",
+      },
       hero: {
         copy: "いつでも気軽に楽しめる、小さなゲームとひらめきのある遊び。",
       },
+      solutions: {
+        kicker: "ソリューション",
+        title: "AIインタラクティブドラマ・ソリューション",
+        description: "オリジナルコンテンツを、世界に向けたインタラクティブなプロダクトへと展開します。",
+        steps: {
+          ipStory: "IP・ストーリー分析",
+          interactiveDesign: "インタラクティブ設計の確認",
+          developmentProduction: "ゲーム開発・コンテンツ制作",
+          globalPublishing: "グローバルパブリッシング",
+        },
+      },
+      publishing: {
+        kicker: "パブリッシング",
+        title: "グローバルパブリッシング能力",
+        description: "新しい市場へ届けるための、実践的なパブリッシング体制を提供します。",
+        capabilities: {
+          localization: "ローカライゼーション",
+          platformDistribution: "プラットフォーム配信",
+          operationOptimization: "運用最適化",
+          monetization: "マネタイズ",
+        },
+      },
+      about: {
+        kicker: "私たちについて",
+        title: "SaibaKen Studio",
+        description: "オリジナルIPをインタラクティブなプロダクトへと進化させ、世界の市場につなげます。",
+        positioning: "IPプロダクト化とグローバルパブリッシングのプラットフォーム",
+      },
+      business: { characters: { dodon: "ドドン忍者", candy: "キャンディビーズ", neji: "ねじねじハッカー" } },
       actions: { googlePlay: "Google Playで入手", comingSoon: "近日公開" },
       games: {
         dodon: {
@@ -122,10 +184,41 @@ document.documentElement.classList.add("js");
         title: "SaibaKen Studio | 輕鬆上手，樂趣滿滿",
         description: "SaibaKen Studio 製作隨時都能輕鬆享受的手機遊戲。",
       },
-      nav: { home: "首頁", games: "遊戲", menu: "開啟選單" },
+      nav: {
+        home: "首頁", business: "商務", solutions: "解決方案", publishing: "發行能力", about: "關於我們", games: "遊戲", contact: "聯絡我們", menu: "開啟選單",
+      },
       hero: {
         copy: "小巧的遊戲、俐落的創意，以及隨時都能享受的爽快體驗。",
       },
+      solutions: {
+        kicker: "解決方案",
+        title: "AI 互動劇解決方案",
+        description: "將原創內容轉化為面向全球受眾的互動產品。",
+        steps: {
+          ipStory: "IP 與劇情分析",
+          interactiveDesign: "確認互動設計",
+          developmentProduction: "遊戲開發與內容製作",
+          globalPublishing: "全球發行",
+        },
+      },
+      publishing: {
+        kicker: "發行能力",
+        title: "全球發行能力",
+        description: "為產品進入新市場建立聚焦且務實的發行路徑。",
+        capabilities: {
+          localization: "在地化",
+          platformDistribution: "平台發行",
+          operationOptimization: "營運優化",
+          monetization: "商業化",
+        },
+      },
+      about: {
+        kicker: "關於我們",
+        title: "SaibaKen Studio",
+        description: "將原創 IP 轉化為互動產品，並連結全球市場。",
+        positioning: "IP 產品化與全球發行平台",
+      },
+      business: { characters: { dodon: "怒雷忍者", candy: "甜心拼豆", neji: "螺絲駭客" } },
       actions: { googlePlay: "前往 Google Play", comingSoon: "即將上線" },
       games: {
         dodon: {
@@ -174,10 +267,41 @@ document.documentElement.classList.add("js");
         title: "SaibaKen Studio | 轻松上手，乐趣满满",
         description: "SaibaKen Studio 制作随时都能轻松享受的手机游戏。",
       },
-      nav: { home: "首页", games: "游戏", menu: "打开菜单" },
+      nav: {
+        home: "首页", business: "商务", solutions: "解决方案", publishing: "发行能力", about: "关于我们", games: "游戏", contact: "联系我们", menu: "打开菜单",
+      },
       hero: {
         copy: "小巧的游戏、利落的创意，以及随时都能享受的爽快体验。",
       },
+      solutions: {
+        kicker: "解决方案",
+        title: "AI 互动剧解决方案",
+        description: "将原创内容转化为面向全球受众的互动产品。",
+        steps: {
+          ipStory: "IP 与剧情分析",
+          interactiveDesign: "互动设计确认",
+          developmentProduction: "游戏开发与内容制作",
+          globalPublishing: "全球发行",
+        },
+      },
+      publishing: {
+        kicker: "发行能力",
+        title: "全球发行能力",
+        description: "为产品进入新市场建立聚焦、务实的发行路径。",
+        capabilities: {
+          localization: "本地化",
+          platformDistribution: "平台发行",
+          operationOptimization: "运营优化",
+          monetization: "商业化",
+        },
+      },
+      about: {
+        kicker: "关于我们",
+        title: "SaibaKen Studio",
+        description: "将原创 IP 转化为互动产品，并连接全球市场。",
+        positioning: "IP 产品化与全球发行平台",
+      },
+      business: { characters: { dodon: "怒雷忍者", candy: "甜心拼豆", neji: "螺丝骇客" } },
       actions: { googlePlay: "前往 Google Play", comingSoon: "即将上线" },
       games: {
         dodon: {
